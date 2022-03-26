@@ -1,6 +1,8 @@
 var express = require('express')
 var multer  = require('multer')
-const path = require('path');
+var path = require('path');
+var id = require('shortid');
+
 var port = 3000;
 
 var app = express()
@@ -10,7 +12,7 @@ var storage = multer.diskStorage({
       cb(null, './uploads')
     },
     filename: function (req, file, cb) {
-      cb(null, "receipt.png")
+      cb(null, `${id.generate()}.png`);
     }
 })
 var upload = multer({ storage: storage })
