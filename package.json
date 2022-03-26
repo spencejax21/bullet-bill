@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/spencejax21/bullet-bill#readme",
   "dependencies": {
+    "ejs": "^3.1.6",
     "express": "^4.17.3",
-    "multer": "^1.4.4"
+    "multer": "^1.4.4",
+    "path": "^0.12.7"
   }
 }

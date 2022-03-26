@@ -1,24 +1,34 @@
-const express = require('express')
-const multer  = require('multer')
+var express = require('express')
+var multer  = require('multer')
+const path = require('path');
+var port = 3000;
 
-const app = express()
-const port = 3000
+var app = express()
 
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
       cb(null, './uploads')
     },
     filename: function (req, file, cb) {
-      cb(null, file.originalname)
+      cb(null, "receipt.png")
     }
 })
 var upload = multer({ storage: storage })
 
+app.use('/uploads', express.static('uploads'));
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+    res.render(path.join(__dirname, "/pages/home.ejs"));
 })
 
-app.listen(port, () => {
-  console.log(`BulletBill listening on port ${port}`)
+app.post('/receipt-upload', upload.single('profile-file'), function (req, res, next) {
+  // req.file is the `profile-file` file
+  // req.body will hold the text fields, if there were any
+  console.log(JSON.stringify(req.file))
+  var response = '<a href="/">Home</a><br>'
+  response += "Files uploaded successfully.<br>"
+  response += `<img src="${req.file.path}" /><br>`
+  return res.send(response)
 })
+   
+app.listen(port,() => console.log(`Server running on port ${port}!`))
