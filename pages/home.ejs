@@ -5,8 +5,8 @@
         <meta charset="UTF-8">
         <title>Receipt Form</title>
     
-        <h1 style="text-align:center;" >
-            <font face="Camphor" size="20px" color="#3a3a3a"> Bullet Bill: payment that fucks </font>
+        <h1 class="slogan">
+            Split bills <br/> quick and easy
         </h1>
         <script>
             let txt = document.getElementbyId("header");
@@ -16,17 +16,29 @@
         <!-- CSS (load bootstrap from a CDN) -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
         <style>
-        body { padding-top:50px; }
+        body { padding-top:50px; padding-left:100px; padding-right:100px}
+        x
         </style>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">  
     </head>
 
 <style>
+    .slogan {
+        font-family: 'Roboto';
+        font-size: 80px;
+        color: #ffffff;
+        text-align:left;
+    }
+
     #grad {
         height: 100vh; 
-        background: linear-gradient(to bottom right, rgb(107,193,250), rgb(78, 90, 196), rgb(235, 50, 210)); 
-        background-size: 200% 200%;
-        animation: gradient 15s ease infinite;
+        background: linear-gradient(to bottom right, rgb(63, 176, 211), rgb(73, 86, 201), rgb(169, 97, 252), rgb(240, 90, 220)); 
+        background-size: 150% 150%;
+        animation: gradient 10s ease infinite;
     }
+    
     @keyframes gradient {
         0% {
             background-position: 0% 50%;
