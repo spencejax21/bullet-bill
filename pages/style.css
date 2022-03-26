@@ -1,9 +1,53 @@
 
 .slogan {
     font-family: 'Roboto';
-    font-size: 80px;
-    color: #ffffff;
-    text-align:left;
+    font-size: 75px;
+    color: rgba(255, 255, 255, 0.70);
+    text-align: center;
+}
+
+.logo {
+    color: rgba(255, 255, 255, 0.70);
+    text-align: left;
+}
+
+.browse {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    border-radius: 16px;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    border-style: none;
+    margin-bottom: 1.5%;
+    transition: background 0.3s ease-in-out;
+}
+.browse:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.upload {
+    background-color: white;
+    color: black;
+    mix-blend-mode: screen;
+    border-radius: 16px;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-style: none;
+    transition: background 0.3s ease-in-out;
+}
+
+.upload:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+body{
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 50px;
+    text-align: center;
 }
 
 #grad {
@@ -23,9 +67,4 @@
     100% {
         background-position: 0% 50%;
     }
-}
-
-body {
-    padding-top: 10px;
-    background-color: green;
 }
