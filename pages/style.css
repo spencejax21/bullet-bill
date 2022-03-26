@@ -1,0 +1,24 @@
+
+#grad {
+    height: 100vh; 
+    background: linear-gradient(to bottom right, rgb(107,193,250), rgb(78, 90, 196), rgb(235, 50, 210)); 
+    background-size: 200% 200%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body {
+    padding-top: 10px;
+    background-color: green;
+}
