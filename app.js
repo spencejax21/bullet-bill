@@ -19,6 +19,7 @@ var storage = multer.diskStorage({
 var upload = multer({ storage: storage })
 
 app.use('/uploads', express.static('uploads'));
+app.use(express.static('pages/'));
 
 app.get('/', (req, res) => {
     res.render(path.join(__dirname, "/pages/home.ejs"));
@@ -35,5 +36,5 @@ app.post('/receipt-upload', upload.single('profile-file'), function (req, res, n
   response += `<img src="${req.file.path}" /><br>`
   return res.send(response)
 })
-   
+  
 app.listen(port,() => console.log(`Server running on port ${port}!`))

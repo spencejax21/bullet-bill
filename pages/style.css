@@ -1,0 +1,31 @@
+
+.slogan {
+    font-family: 'Roboto';
+    font-size: 80px;
+    color: #ffffff;
+    text-align:left;
+}
+
+#grad {
+    height: 100vh; 
+    background: linear-gradient(to bottom right, rgb(63, 176, 211), rgb(73, 86, 201), rgb(169, 97, 252), rgb(240, 90, 220)); 
+    background-size: 150% 150%;
+    animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body {
+    padding-top: 10px;
+    background-color: green;
+}
