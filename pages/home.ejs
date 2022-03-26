@@ -3,51 +3,34 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">  
         <link rel="stylesheet" href = "style.css"> 
     </head>
+    
     <header>
         <div> 
             <h2>
                 Insert logo here
             </h2>      
-            <nav>
-                <a href="/">Home</a>
-                <a href="/about">About Us</a>
-            </nav>
         </div>
-        
         <title>Receipt Form</title>
-    
         <h1 class="slogan">
             Split bills <br/> quick and easy
         </h1>
-
-        <!-- CSS (load bootstrap from a CDN) -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
-        
-        <style>
-        body { padding-top:50px; padding-left:100px; padding-right:100px}
-        </style>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">  
     </header>
 
-<body id = "grad">
-    <script>
-        var myColor = "pink";
-    </script>
-
-    <form method="POST" action="/receipt-upload" enctype="multipart/form-data">
-        <div>
-            <label>Upload Receipt</label>
-            <input id="upload" type="file" name="profile-file" required/>
-        </div>
-        <div>
-            <input type="submit" value="Upload" />
-        </div>
-    </form>
-
-    <hr>
-</body>
+    <body id = "grad">
+        <form method="POST" action="/receipt-upload" enctype="multipart/form-data">
+            <div>
+                <label>Upload Receipt</label>
+                <input id="upload" type="file" name="profile-file" required/>
+            </div>
+            <div>
+                <input type="submit" value="Upload" />
+            </div>
+        </form>
+    </body>
 </html>
