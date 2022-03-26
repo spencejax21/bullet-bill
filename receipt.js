@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-let send_receipt = (async () => {
+let send_receipt = (async (url) => {
     try{
         let res = await axios(
             {
@@ -12,7 +12,7 @@ let send_receipt = (async () => {
                     'accept': 'application/json'
                 },
                 data: {
-                    url: "https://www.patriotsoftware.com/wp-content/uploads/2019/12/invoice-vs.-receipt-image-of-receipt.jpg",
+                    url: url,
                     headers: {
                         'x-custom-key': 'string'
                     }
@@ -25,5 +25,5 @@ let send_receipt = (async () => {
     }
 });
 
-send_receipt();
+//send_receipt("https://www.patriotsoftware.com/wp-content/uploads/2019/12/invoice-vs.-receipt-image-of-receipt.jpg");
 module.exports = send_receipt;

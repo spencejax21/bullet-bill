@@ -2,6 +2,7 @@ var express = require('express')
 var multer  = require('multer')
 var path = require('path');
 var id = require('shortid');
+const send_receipt = require('./receipt');
 
 var port = 3000;
 
@@ -26,6 +27,8 @@ app.get('/', (req, res) => {
 app.post('/receipt-upload', upload.single('profile-file'), function (req, res, next) {
   // req.file is the `profile-file` file
   // req.body will hold the text fields, if there were any
+  //console.log(path.join(__dirname, `/uploads/${req.file.filename}`));
+  send_receipt(path.join(__dirname, `/uploads/${req.file.filename}`));
   console.log(JSON.stringify(req.file))
   var response = '<a href="/">Home</a><br>'
   response += "Files uploaded successfully.<br>"
