@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/spencejax21/bullet-bill#readme",
   "dependencies": {
+    "axios": "^0.26.1",
     "express": "^4.17.3"
   }
 }
