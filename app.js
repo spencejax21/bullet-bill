@@ -20,12 +20,7 @@ var upload = multer({ storage: storage })
 app.use('/uploads', express.static('uploads'));
 
 app.get('/', (req, res) => {
-<<<<<<< HEAD
-  res.send('Hello World!');
-  
-=======
     res.render(path.join(__dirname, "/pages/home.ejs"));
->>>>>>> 936d427d1b2485be69da1c66eecd5838529d7e2a
 })
 
 app.post('/receipt-upload', upload.single('profile-file'), function (req, res, next) {
