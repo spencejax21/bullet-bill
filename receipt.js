@@ -2,14 +2,14 @@ const axios = require('axios');
 
 let send_receipt = (async () => {
     try{
-        const response = await axios(
+        let res = await axios(
             {
-                url: '/receipt/v1/verbose/url',
+                url: 'https://api.taggun.io/api/receipt/v1/verbose/url',
                 method: 'post',
-                baseURL: 'https:://api.taggun.io/api',
                 headers: {
-                    'Content-Type' : 'application/json',
-                    'apikey': '6d2fb860ad2211ec8215c512ccf27e54'
+                    'contentType' : 'application/json',
+                    'apikey': '6d2fb860ad2211ec8215c512ccf27e54',
+                    'accept': 'application/json'
                 },
                 data: {
                     url: "https://www.patriotsoftware.com/wp-content/uploads/2019/12/invoice-vs.-receipt-image-of-receipt.jpg",
@@ -19,13 +19,11 @@ let send_receipt = (async () => {
                 }
             }
         );
-        return response;
+        console.log(res.data.text.text);
     }catch(e){
         console.log(e);
     }
 });
 
-let res = send_receipt();
-console.log(res);
-
+send_receipt();
 module.exports = send_receipt;
