@@ -1,0 +1,19 @@
+{
+  "name": "bulletbill",
+  "version": "1.0.0",
+  "description": "Project for HooHacks2022",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spencejax21/bullet-bill.git"
+  },
+  "author": "Rohan Chowla, Gabe Silverstein, Spencer Jackson, Kevin Lee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/spencejax21/bullet-bill/issues"
+  },
+  "homepage": "https://github.com/spencejax21/bullet-bill#readme"
+}
