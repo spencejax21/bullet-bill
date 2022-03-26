@@ -1,0 +1,1 @@
+.Picture{--pictureMaxWidth:none;display:flex;max-width:var(--pictureMaxWidth)}.Picture--fitCover{width:100%;height:100%}.Picture__image{vertical-align:top;align-self:flex-start}.Picture--autosize .Picture__image{width:100%;height:auto;max-width:100%}.Picture--fitCover .Picture__image{width:100%;height:100%;-o-object-fit:cover;object-fit:cover}
