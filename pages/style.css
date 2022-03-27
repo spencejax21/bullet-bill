@@ -69,30 +69,3 @@ body{
         background-position: 0% 50%;
     }
 }
-
-body {
-    padding-top: 10px;
-}
-
-
-@media (max-width: 500px) {
-    .slogan {
-        font-family: 'Roboto';
-        font-size: 40px;
-        color: #ffffff;
-        text-align:left;
-    }
-
-    h2 {
-        font-size: 20px;
-    }
-}
-
-@media (min-width: 500px) {
-    .slogan {
-        font-family: 'Roboto';
-        font-size: 80px;
-        color: #ffffff;
-        text-align:left;
-    }
-}
