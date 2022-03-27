@@ -30,14 +30,14 @@
 
             <tbody id="items" class="items">
                 <% var obj = JSON.parse(data) %>
-                <% var count = 0 %>
+                <% var countP = 0 %>
                 <%for(let item in obj["items"]){ %>
-                    <%count++%>
+                    <%countP++%>
                     <tr>
                         <th><%-item%></th>
                         <th>$<%-obj["items"][item]%></th>
                         <th>
-                            <select class="dropDown" name="person" id="person<%-count%>">
+                            <select class="dropDown" name="person" id="person<%-countP%>">
                                 <% for(var i = 1; i<=count; i++){ %>
                                     <%let str = "Person " + i%>
                                     <option value="<%-str%>"><%-str%></option>
