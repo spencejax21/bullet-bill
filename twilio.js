@@ -1,5 +1,6 @@
-const accountSid = 'AC9a9794053d967200e56bc5df8b1d8031'
-const authToken = 'c13a3a386fea9f58e5d13f97d27a4fad'
+require('dotenv').config()
+const accountSid = process.env.TWILIO_ACCOUNT_SID;
+const authToken = process.env.TWILIO_AUTH_TOKEN;
 const client = require('twilio')(accountSid, authToken);
 
 let send_text = ((msg, number) =>{
