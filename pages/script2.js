@@ -47,6 +47,10 @@ document.addEventListener("DOMContentLoaded", function(){
         console.log(cost);
         console.log(total);
         console.log(subtotal);
+
+        var venmoHandle = document.getElementById("venmo");
+        var handle = venmoHandle.value;
+
         //console.log(total);
         var x = pnumbers.rows.length;
         for(var i = 0; i<x; i++){
@@ -56,6 +60,9 @@ document.addEventListener("DOMContentLoaded", function(){
                 tax *= percent;
                 cost[i] += tax;
                 var msg = "You owe $" + cost[i].toFixed(2) + " for " + itemsArr[i];
+                if(handle != null){
+                    msg += " to " + handle;
+                }
                 console.log(msg);
                 var url = document.baseURI;
                 url = url.substring(0, url.indexOf("results"));
@@ -63,7 +70,8 @@ document.addEventListener("DOMContentLoaded", function(){
                 {
                     msg: msg,
                     number: numbers[i]
-                });
+                })
+                alert("Sent!");
             }
         }
     }

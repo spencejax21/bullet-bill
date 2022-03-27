@@ -9,7 +9,7 @@ let send_text = ((msg, number) =>{
      from: '+14422504664',
      to: number
    })
-  .then(message => console.log(message.sid));
+  //.then(message => console.log(message.sid));
 });
 
 module.exports = send_text;
