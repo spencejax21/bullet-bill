@@ -98,7 +98,7 @@ let send_receipt = (async (img) => {
             total: total,
             subtotal: subtotal
         }
-        //console.log(returnObj);
+        console.log(returnObj);
         return returnObj;
 
     }catch(e){
@@ -106,7 +106,7 @@ let send_receipt = (async (img) => {
     }
 });
 
-//var parsed = send_receipt('https://www.patriotsoftware.com/wp-content/uploads/2019/12/invoice-vs.-receipt-image-of-receipt.jpg');
+var parsed = send_receipt('https://www.patriotsoftware.com/wp-content/uploads/2019/12/invoice-vs.-receipt-image-of-receipt.jpg');
 
 //parsed.then(function(result){
 //    console.log(result);
