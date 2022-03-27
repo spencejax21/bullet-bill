@@ -1,5 +1,5 @@
 ![Banner Image](https://i.imgur.com/OXBbwhj.png)
-<h2>Inspiration</h2>
+<h2>Inspiration :tada: </h2>
 As college students, we constantly find ourselves sharing meals and struggling to split our bills afterwards. Bulletbill is our fast solution to automate the bill splitting process.
 <h2>What is bulletbill?</h2>
 Bulletbill is a webapp that allows you to upload an image of your receipt and will use OCR and AI to recognize the given text. The individual items are separated, and the user can assign which people purchased which items. Finally, the user can input people's phone numbers and their own venmo to send a personalized text about how much they each person owes, including their proportion of taxing and tip, sent out using the Twilio text bot.
