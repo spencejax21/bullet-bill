@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(){
-    var sendbtn = document.getElementById("go");
+    var sendbtn = document.getElementById("continue");
     sendbtn.onclick = function(){
         console.log("clicked");
         var items = document.getElementById("items");
