@@ -35,8 +35,8 @@ let send_receipt = (async (img) => {
         total = -1;
         subtotal = -1;
         begOfItems = -1;
+        foundItemList = false;
         endOfItems = -1;
-        foundDateTime = false;
         foundFirstTotal = false;
 
         for(let i=0; i<arr.length; i++){
@@ -47,32 +47,15 @@ let send_receipt = (async (img) => {
                     index = str.toLowerCase().indexOf(x);
                     //console.log(index);
                     data.push(str.substring(index));
-                    if(!foundDateTime){
-                        foundDateTime = true;
-                    }
-                    else{
-                        begOfItems = data.length;
-                    }
                     break;
                 }
             }
             if(index == -1 && date.test(str)){
                 data.push(str);
-                if(!foundDateTime){
-                    foundDateTime = true;
-                }
-                else{
-                    begOfItems = data.length;
-                }
             }
             else if(time.test(str)){
                 data.push(str);
-                if(!foundDateTime){
-                    foundDateTime = true;
-                }
-                else{
-                    begOfItems = data.length;
-                }
+            
             }
             else if(str.includes("$")){
                 data.push(str);
@@ -92,6 +75,12 @@ let send_receipt = (async (img) => {
                         foundFirstTotal = true;
                     }
                 }
+                else{
+                    if(!foundItemList){
+                        foundItemList = true;
+                        begOfItems = data.length-1;
+                    }
+                }
             }
         }
 
@@ -109,7 +98,7 @@ let send_receipt = (async (img) => {
             total: total,
             subtotal: subtotal
         }
-        //console.log(returnObj);
+        console.log(returnObj);
         return returnObj;
 
     }catch(e){
