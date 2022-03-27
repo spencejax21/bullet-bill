@@ -71,7 +71,9 @@ document.addEventListener("DOMContentLoaded", function(){
                     msg: msg,
                     number: numbers[i]
                 })
-                alert("Sent!");
+                
+                var btn = document.getElementById("continue");
+                btn.innerHTML = "Sent!";
             }
         }
     }
