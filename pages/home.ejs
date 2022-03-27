@@ -12,12 +12,13 @@
         <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,800;1,400&family=Roboto:wght@700&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&family=Roboto:wght@700&display=swap" rel="stylesheet"> 
         <script src="https://kit.fontawesome.com/62ec86d023.js" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="script.js"></script>
     </head>
     
     <header>
         <img id="logo" src="BBLogo.png">   
         <h3 id="bulletTitle">bulletbill</h3>
-         
+        <!--<a href="/numPeople">Number of People Input</a>-->
         
         <title>Receipt Form</title>
         <h1 class="slogan">
@@ -33,7 +34,7 @@
             </div>
             <div>
                 <!--<input class="upload" type="submit" value="Upload" />-->
-                <button class="upload"><i class="fa-solid fa-arrow-up"></i>  Upload</button>
+                <button id = "send" class="upload" disabled=true>Select An Image</button>
             </div>
         </form>
     </body>

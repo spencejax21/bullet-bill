@@ -21,6 +21,10 @@ app.get('/', (req, res) => {
     res.render(path.join(__dirname, "/pages/home.ejs"));
 })
 
+app.get('/numpeople', (req, res) => {
+  res.render(path.join(__dirname, "/pages/numPeople.ejs"));
+})
+
 app.post('/receipt-upload', multer.single('profile-file'), (req, res, next) => {
   if (!req.file) {
     res.status(400).send('No file uploaded.');
@@ -37,6 +41,10 @@ app.post('/receipt-upload', multer.single('profile-file'), (req, res, next) => {
   blobStream.on('finish', () => {
     var parsed = send_receipt(`https://storage.googleapis.com/${bucket.name}/${blob.name}`);
     parsed.then(function(result){
+      /*res.render(path.join(__dirname, "/pages/output.ejs"), {
+        data: result
+      });*/
+
       return res.send(result);
     })
   });
