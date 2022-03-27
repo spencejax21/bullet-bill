@@ -42,7 +42,7 @@
                     <%countP++%>
                     <tr>
                         <th><%-item%></th>
-                        <th>$<%-obj["items"][item]%></th>
+                        <th>$<%-obj["items"][item].toFixed(2)%></th>
                         <th>
                             <select class="dropDown" name="person" id="person<%-countP%>">
                                 <% for(var i = 1; i<=count; i++){ %>
@@ -69,13 +69,14 @@
                         <th><%-i%></th>
                         <th>
                              <%let str = "Person " + i%>
-                             <input  class="pnumInput" id= "<%-str%>"name="<%-str%>" type="tel" placeholder = "Ex. 1234561234" size=20 required/>
+                             <input  class="pnumInput" id= "<%-str%>"name="<%-str%>" type="tel" placeholder = "Ex. 1234567890" size=20 required/>
                         </th>
                     </tr>
                 <%}%>
             </tbody>
         </table>
 
-        <button id="continue"><i class="fa-solid fa-arrow-right"></i>  Continue </button>
+        <input id= "venmo" type="text" placeholder = "@Venmo Handle" size=20 required/>
+        <button id="continue"><i class="fa-solid fa-arrow-right"></i>  Send </button>
     </body>
 </html>
