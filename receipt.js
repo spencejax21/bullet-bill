@@ -106,6 +106,10 @@ let send_receipt = (async (img) => {
     }
 });
 
-send_receipt('https://www.patriotsoftware.com/wp-content/uploads/2019/12/invoice-vs.-receipt-image-of-receipt.jpg');
+var parsed = send_receipt('https://www.patriotsoftware.com/wp-content/uploads/2019/12/invoice-vs.-receipt-image-of-receipt.jpg');
+
+parsed.then(function(result){
+    console.log(result);
+})
 
 module.exports = send_receipt;
