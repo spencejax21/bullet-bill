@@ -25,6 +25,10 @@ app.get('/', (req, res) => {
     res.render(path.join(__dirname, "/pages/home.ejs"));
 })
 
+app.get('/numpeople', (req, res) => {
+  res.render(path.join(__dirname, "/pages/numPeople.ejs"));
+})
+
 app.post('/receipt-upload', upload.single('profile-file'), function (req, res, next) {
   // req.file is the `profile-file` file
   // req.body will hold the text fields, if there were any
