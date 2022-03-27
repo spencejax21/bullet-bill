@@ -43,5 +43,24 @@
                 <%} %>
             </tbody>
         </table>
+
+        <table>
+            <tr>
+                <th> Person </th>
+                <th> Number </th>
+            </tr>
+
+            <tbody>
+                <% for(var i = 1; i<=count; i++){ %>
+                    <tr>
+                        <th><%-i%></th>
+                        <th>
+                             <%let str = "Person " + i%>
+                             <input type="text" id="<%-str%>" name="<%-str%>">
+                        </th>
+                    </tr>
+                <%}%>
+            </tbody>
+        </table>
     </body>
 </html>
