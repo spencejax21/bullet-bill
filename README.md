@@ -9,3 +9,4 @@ The frontend was for the webapp was built with EJS, HTML, CSS, and Javascript an
 <a href="https://bulletbill.tech/">Visit bulletbill</a>
 
 *if the above link fails, please use this <a href="https://bulletbill.uk.r.appspot.com/">backup link</a>.
+**note that Twilio is currently disfunctional on non-approved phone numbers, as we only have access to a trial version
