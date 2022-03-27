@@ -37,6 +37,10 @@ app.post('/receipt-upload', multer.single('profile-file'), (req, res, next) => {
   blobStream.on('finish', () => {
     var parsed = send_receipt(`https://storage.googleapis.com/${bucket.name}/${blob.name}`);
     parsed.then(function(result){
+      /*res.render(path.join(__dirname, "/pages/output.ejs"), {
+        data: result
+      });*/
+
       return res.send(result);
     })
   });

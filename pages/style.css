@@ -106,6 +106,14 @@
     background-color: rgba(255, 255, 255, 0.7);
 }
 
+.upload:disabled{
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.disabled {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
 body{
     padding-top: 150px;
     text-align: center;
