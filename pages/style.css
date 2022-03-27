@@ -197,7 +197,7 @@ table {
     width: 60%
 }
 
-#dropDown {
+.dropDown {
     background-color: rgba(255, 255, 255, 0.3);
     border-radius: 10px;
     border: none;
@@ -210,7 +210,7 @@ table {
     color: white;
 }
 
-#pnumInput {
+.pnumInput {
     background-color: rgba(255, 255, 255, 0.3);
     border-radius: 10px;
     border: none;

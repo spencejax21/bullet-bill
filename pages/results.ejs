@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">  
         <link rel="stylesheet" href = "style.css"> 
         <script src="https://kit.fontawesome.com/62ec86d023.js" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="script2.js"></script>
     </head>
 
     <header>
@@ -23,16 +24,20 @@
         <table>
             <tr>
                 <th> Items </th>
+                <th> Price </th>
+                <th> Person </th>
             </tr>
 
             <tbody id="items" class="items">
                 <% var obj = JSON.parse(data) %>
+                <% var countP = 0 %>
                 <%for(let item in obj["items"]){ %>
-                    <% var itemS = item + " " + obj["items"][item]%>%>
+                    <%countP++%>
                     <tr>
-                        <th><%-itemS%></th>
+                        <th><%-item%></th>
+                        <th>$<%-obj["items"][item]%></th>
                         <th>
-                            <select id="dropDown" name="person" id="person">
+                            <select class="dropDown" name="person" id="person<%-countP%>">
                                 <% for(var i = 1; i<=count; i++){ %>
                                     <%let str = "Person " + i%>
                                     <option value="<%-str%>"><%-str%></option>
@@ -56,7 +61,7 @@
                         <th><%-i%></th>
                         <th>
                              <%let str = "Person " + i%>
-                             <input  id="pnumInput" name="<%-str%>" type="text" placeholder = "Enter Phone Number" size=20 required/>
+                             <input  class="pnumInput" id= "<%-str%>"name="<%-str%>" type="text" placeholder = "Enter Phone Number" size=20 required/>
                         </th>
                     </tr>
                 <%}%>
