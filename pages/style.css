@@ -1,10 +1,29 @@
-
-.slogan {
-    font-family: 'Roboto';
-    font-size: 75px;
-    color: rgba(255, 255, 255, 0.70);
-    text-align: center;
+@media (min-width: 500px) {
+    .slogan {
+        font-family: 'Roboto';
+        font-size: 70px;
+        color: rgba(255, 255, 255, 0.80);
+        text-align: center;
+        padding-top: 30px;
+    }
     
+    .logo {
+        color: rgba(255, 255, 255);
+        text-align: left;
+    }
+    
+    .browse {
+        background-color: rgba(255, 255, 255, 0.3);
+        color: white;
+        border-radius: 16px;
+        padding-left: 3%;
+        padding-right: 3%;
+        padding-top: 0.5%;
+        padding-bottom: 0.5%;
+        border-style: none;
+        margin-bottom: 1.5%;
+        transition: background 0.3s ease-in-out;
+    }
 }
 
 #logo {
@@ -26,18 +45,47 @@
     top: 5px;
     left: 105px;
 }
+@media(max-width: 500px) {
+    .slogan {
+        font-family: 'Roboto';
+        font-size: 25px;
+        color: rgba(255, 255, 255, 0.8);
+        text-align: center;
+        padding-top: 20px;
+    }
 
-.browse {
-    background-color: rgba(255, 255, 255, 0.3);
-    color: white;
-    border-radius: 16px;
-    padding-left: 3%;
-    padding-right: 3%;
-    padding-top: 0.5%;
-    padding-bottom: 0.5%;
-    border-style: none;
-    margin-bottom: 1.5%;
-    transition: background 0.3s ease-in-out;
+    .logo {
+        color: rgba(255, 255, 255);
+        text-align: left;
+        font-size: 12px;
+    }
+
+    .browse {
+        background-color: rgba(255, 255, 255, 0.3);
+        font-size: 30%;
+        color: white;
+        border-radius: 16px;
+        padding-left: 7%;
+        padding-right: 7%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        border-style: none;
+        margin-bottom: 1%;
+        transition: background 0.3s ease-in-out;
+    }
+    .upload {
+        background-color: white;
+        font-size: 40%;
+        color: black;
+        mix-blend-mode: screen;
+        border-radius: 16px;
+        padding-left: 7%;
+        padding-right: 7%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        border-style: none;
+        transition: background 0.3s ease-in-out;
+    }
 }
 .browse:hover{
     background-color: rgba(255, 255, 255, 0.5);
