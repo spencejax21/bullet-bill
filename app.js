@@ -29,7 +29,13 @@ app.get('/count', (req, res) => {
 })
 
 app.get('/results', (req, res) => {
-  res.render(path.join(__dirname, "/pages/results.ejs"));
+  var parsed = send_receipt(`https://storage.googleapis.com/bulletbillreceipts/${req.query.blob}.png`);
+    parsed.then(function(result){
+      res.render(path.join(__dirname, "/pages/results.ejs"), {
+        count: req.query.count,
+        data: result
+      });
+    })
 })
 
 app.post('/receipt-upload', multer.single('profile-file'), (req, res, next) => {
