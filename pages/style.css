@@ -163,6 +163,20 @@
     border-style: none;
     transition: background 0.3s ease-in-out;
 }
+#continue {
+    background-color: white;
+    border-radius: 15px;
+    color: black;
+    mix-blend-mode: screen;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    border-style: none;
+    transition: background 0.3s ease-in-out;
+    position: relative;
+        bottom: 8%
+}
 .upload:hover {
     background-color: rgba(255, 255, 255, 0.596);
 }
@@ -192,14 +206,23 @@ table {
     font-weight: 25%;
     font-family: "Roboto";
     margin-bottom: 5%;
+    background-color: rgba(255,255,255,0.2);
 }
 
 #items {
     width: 60%
 }
 
+#itemhead{
+    background-color: #55608f;
+}
+
+#items th:hover{
+    background-color: rgba(255,255,255,0.3);
+}
+
 #dropDown {
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     border: none;
     box-shadow: none;
@@ -212,7 +235,7 @@ table {
 }
 
 #pnumInput {
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     border: none;
     box-shadow: none;
@@ -225,6 +248,13 @@ table {
 }
 
 
+#pnumbers thead tr{
+    background-color: #55608f;
+}
+
+#pnumbers tbody tr th:hover{
+    background-color: rgba(255,255,255,0.3);
+}
 
 #pnumInput::placeholder {
     color: rgba(255, 255, 255, 0.356);

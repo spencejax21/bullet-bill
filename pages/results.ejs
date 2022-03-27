@@ -11,7 +11,7 @@
         <script src="https://kit.fontawesome.com/62ec86d023.js" crossorigin="anonymous"></script>
     </head>
 
-    <header>
+    <header style="padding-bottom: 0%;">
         <div id="logoWrapper">
             <img id="logo" src="BBLogo.png">   
             <h3 id="bulletTitle">bulletbill</h3>
@@ -21,8 +21,9 @@
 
     <body id="grad" style = "text-align: center;">
         <table>
-            <tr>
+            <tr id="itemhead">
                 <th> Items </th>
+                <th>Person</th>
             </tr>
 
             <tbody id="items" class="items">
@@ -45,24 +46,25 @@
         </table>
 
         <table id="pnumbers">
-            <tr>
-                <th> Person </th>
-                <th> Phone Number </th>
-            </tr>
-
+            <thead>
+                <tr>
+                    <th> Person </th>
+                    <th> Phone Number </th>
+                </tr>
+            </thead>
             <tbody>
                 <% for(var i = 1; i<=count; i++){ %>
                     <tr>
                         <th><%-i%></th>
                         <th>
                              <%let str = "Person " + i%>
-                             <input  id="pnumInput" name="<%-str%>" type="text" placeholder = "Enter Phone Number" size=20 required/>
+                             <input  id="pnumInput" name="<%-str%>" type="text" placeholder = "Ex. 1234561234" size=20 required/>
                         </th>
                     </tr>
                 <%}%>
             </tbody>
         </table>
 
-        <button id="go" class="go"><i class="fa-solid fa-arrow-right"></i>  Go </button>
+        <button id="continue"><i class="fa-solid fa-arrow-right"></i>  Continue </button>
     </body>
 </html>
