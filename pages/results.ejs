@@ -22,9 +22,26 @@
     <body id="grad">
         <table>
             <tr>
-                <tH> Person # </tH>
-                <tH> Items </tH>
-                <tH> Phone Number </tH>
+                <th> Items </th>
             </tr>
+
+            <tbody>
+                <% var obj = JSON.parse(data) %>
+                <%for(let item in obj["items"]){ %>
+                    <% var itemS = item + " " + obj["items"][item]%>%>
+                    <tr>
+                        <th><%-itemS%></th>
+                        <th>
+                            <select name="person" id="person">
+                                <% for(var i = 1; i<=count; i++){ %>
+                                    <%let str = "Person " + i%>
+                                    <option value="<%-str%>"><%-str%></option>
+                                <%}%>
+                              </select>
+                        </th>
+                    </tr>
+                <%} %>
+            </tbody>
         </table>
     </body>
+</html>
