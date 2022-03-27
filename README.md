@@ -8,3 +8,4 @@ The frontend was for the webapp was built with EJS, HTML, CSS, and Javascript an
 <p></p>
 <a href="https://bulletbill.tech/">Visit bulletbill</a>
 
+*if the above link fails, please use this <a href="https://bulletbill.uk.r.appspot.com/">backup link</a>.
