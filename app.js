@@ -20,7 +20,7 @@ var upload = multer({ storage: storage })
 
 app.use('/uploads', express.static('uploads'));
 app.use(express.static('pages/'));
-
+app.use(express.static('resources/'))
 app.get('/', (req, res) => {
     res.render(path.join(__dirname, "/pages/home.ejs"));
 })

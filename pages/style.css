@@ -28,8 +28,8 @@
 
 #logo {
     display: inline-block;
-    height: 70px;
-    width: 95px;
+    height: 90px;
+    width: 115px;
     position: absolute;
     top: 16px;
     left: 15px;
@@ -42,7 +42,7 @@
     padding-top: 30px; 
     display: inline-block;
     position: absolute;
-    top: 5px;
+    top: 8px;
     left: 105px;
 }
 @media(max-width: 500px) {
