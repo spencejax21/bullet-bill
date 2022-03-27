@@ -1,9 +1,114 @@
+@media (min-width: 500px) {
+    .slogan {
+        font-family: 'Roboto';
+        font-size: 70px;
+        color: rgba(255, 255, 255, 0.80);
+        text-align: center;
+        padding-top: 30px;
+    }
+    
+    .logo {
+        color: rgba(255, 255, 255);
+        text-align: left;
+    }
+    
+    .browse {
+        background-color: rgba(255, 255, 255, 0.3);
+        color: white;
+        border-radius: 16px;
+        padding-left: 3%;
+        padding-right: 3%;
+        padding-top: 0.5%;
+        padding-bottom: 0.5%;
+        border-style: none;
+        margin-bottom: 1.5%;
+        transition: background 0.3s ease-in-out;
+    }
+}
 
-.slogan {
-    font-family: 'Roboto';
-    font-size: 80px;
-    color: #ffffff;
-    text-align:left;
+#logo {
+    display: inline-block;
+    height: 90px;
+    width: 115px;
+    position: absolute;
+    top: 16px;
+    left: 15px;
+}
+
+#bulletTitle{
+    color: white;
+    text-align: left; 
+    text-decoration: overline; 
+    padding-top: 30px; 
+    display: inline-block;
+    position: absolute;
+    top: 8px;
+    left: 105px;
+}
+@media(max-width: 500px) {
+    .slogan {
+        font-family: 'Roboto';
+        font-size: 25px;
+        color: rgba(255, 255, 255, 0.8);
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .logo {
+        color: rgba(255, 255, 255);
+        text-align: left;
+        font-size: 12px;
+    }
+
+    .browse {
+        background-color: rgba(255, 255, 255, 0.3);
+        font-size: 30%;
+        color: white;
+        border-radius: 16px;
+        padding-left: 7%;
+        padding-right: 7%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        border-style: none;
+        margin-bottom: 1%;
+        transition: background 0.3s ease-in-out;
+    }
+    .upload {
+        background-color: white;
+        font-size: 40%;
+        color: black;
+        mix-blend-mode: screen;
+        border-radius: 16px;
+        padding-left: 7%;
+        padding-right: 7%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        border-style: none;
+        transition: background 0.3s ease-in-out;
+    }
+}
+.browse:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.upload {
+    background-color: white;
+    color: black;
+    mix-blend-mode: screen;
+    border-radius: 16px;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-style: none;
+    transition: background 0.3s ease-in-out;
+}
+.upload:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+body{
+    padding-top: 150px;
+    text-align: center;
 }
 
 #grad {
@@ -23,9 +128,4 @@
     100% {
         background-position: 0% 50%;
     }
-}
-
-body {
-    padding-top: 10px;
-    background-color: green;
 }
