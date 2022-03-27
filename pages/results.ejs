@@ -20,15 +20,15 @@
         <!--<a href="/numPeople">Number of People Input</a>-->
     </header>
 
-    <body id="grad">
-        <table id="items">
+    <body id="grad" style = "text-align: center;">
+        <table>
             <tr>
                 <th> Items </th>
                 <th> Price </th>
                 <th> Person </th>
             </tr>
 
-            <tbody>
+            <tbody id="items" class="items">
                 <% var obj = JSON.parse(data) %>
                 <% var count = 0 %>
                 <%for(let item in obj["items"]){ %>
@@ -37,7 +37,7 @@
                         <th><%-item%></th>
                         <th>$<%-obj["items"][item]%></th>
                         <th>
-                            <select name="person" id="person<%-count%>">
+                            <select class="dropDown" name="person" id="person<%-count%>">
                                 <% for(var i = 1; i<=count; i++){ %>
                                     <%let str = "Person " + i%>
                                     <option value="<%-str%>"><%-str%></option>
@@ -52,7 +52,7 @@
         <table id="pnumbers">
             <tr>
                 <th> Person </th>
-                <th> Number </th>
+                <th> Phone Number </th>
             </tr>
 
             <tbody>
@@ -61,7 +61,7 @@
                         <th><%-i%></th>
                         <th>
                              <%let str = "Person " + i%>
-                             <input type="text" id="<%-str%>" name="<%-str%>">
+                             <input  id="pnumInput" name="<%-str%>" type="text" placeholder = "Enter Phone Number" size=20 required/>
                         </th>
                     </tr>
                 <%}%>

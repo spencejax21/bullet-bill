@@ -180,6 +180,56 @@ body{
     text-align: center;
 }
 
+table, th, td {
+    border: 1px solid;
+}
+
+table {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    font-weight: 25%;
+    font-family: "Roboto";
+    margin-bottom: 5%;
+}
+
+#items {
+    width: 60%
+}
+
+.dropDown {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    border: none;
+    box-shadow: none;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    padding-left: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    color: white;
+}
+
+#pnumInput {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    border: none;
+    box-shadow: none;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    padding-left: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    color: white;
+}
+
+
+
+#pnumInput::placeholder {
+    color: rgba(255, 255, 255, 0.356);
+}
+
 #grad {
     height: 100vh; 
     background: linear-gradient(to bottom right, rgb(63, 176, 211), rgb(73, 86, 201), rgb(169, 97, 252), rgb(240, 90, 220)); 
