@@ -98,7 +98,7 @@ let send_receipt = (async (img) => {
             total: total,
             subtotal: subtotal
         }
-        console.log(returnObj);
+        //console.log(returnObj);
         return returnObj;
 
     }catch(e){

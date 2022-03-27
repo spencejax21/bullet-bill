@@ -9,13 +9,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">  
         <link rel="stylesheet" href = "style.css"> 
         <script src="https://kit.fontawesome.com/62ec86d023.js" crossorigin="anonymous"></script>
-
-        <script>
-            
-        </script>
     </head>
 
-<<<<<<< HEAD
     <header>
         <div id="logoWrapper">
             <img id="logo" src="BBLogo.png">   
@@ -25,41 +20,11 @@
     </header>
 
     <body id="grad">
-        
-       
         <table>
-            <% let data = {
-                dateTime: [ 'June 19, 2017', '11:20 a.m.' ],
-                items: {
-                    '1 Sleeveless shirt ': 19.99,
-                    '1 Faded jeans ': 39.99,
-                    '1 Long dress ': 67.99
-                },
-                total: 135.65,
-                subtotal: 127.97
-            } %> 
-            <% let numPeople = 3 %>
             <tr>
                 <tH> Person # </tH>
                 <tH> Items </tH>
                 <tH> Phone Number </tH>
-
             </tr>
-
-            <% for(int i = 1; i <= numPeople; i++) { %>
-                <tr>
-                <td> <%"Person" + i %> </td>
-                <td>
-                <% for(item in data.items) { %>
-                    <%= item %>
-                    <%= data.items[item] %>
-                <% } %>
-                </td>
-                <td> <input  id="phone-number" type="number" name="Phone Number" placeholder = "Enter Phone #" size=20 required/> </td>
-                </tr>
-            <% } %>
         </table>
     </body>
-=======
-<!-- result.items = array -->
->>>>>>> b1ced9e606a3796af51f27105657bcabcbad0d2d
