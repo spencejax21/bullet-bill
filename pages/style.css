@@ -1,5 +1,5 @@
 /* big page*/
-@media (min-width: 500px) {
+@media (min-width: 420px) {
     .slogan {
         font-family: 'Roboto';
         font-size: 70px;
@@ -50,7 +50,7 @@
 }
 
 /* small page*/
-@media(max-width: 500px) {
+@media(max-width: 420px) {
     .slogan {
         font-family: 'Roboto';
         font-size: 30px;
