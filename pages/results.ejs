@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">  
         <link rel="stylesheet" href = "style.css"> 
         <script src="https://kit.fontawesome.com/62ec86d023.js" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="script2.js"></script>
     </head>
 
     <header>
@@ -20,19 +21,23 @@
     </header>
 
     <body id="grad">
-        <table>
+        <table id="items">
             <tr>
                 <th> Items </th>
+                <th> Price </th>
+                <th> Person </th>
             </tr>
 
             <tbody>
                 <% var obj = JSON.parse(data) %>
+                <% var count = 0 %>
                 <%for(let item in obj["items"]){ %>
-                    <% var itemS = item + " " + obj["items"][item]%>%>
+                    <%count++%>
                     <tr>
-                        <th><%-itemS%></th>
+                        <th><%-item%></th>
+                        <th>$<%-obj["items"][item]%></th>
                         <th>
-                            <select name="person" id="person">
+                            <select name="person" id="person<%-count%>">
                                 <% for(var i = 1; i<=count; i++){ %>
                                     <%let str = "Person " + i%>
                                     <option value="<%-str%>"><%-str%></option>
@@ -44,7 +49,7 @@
             </tbody>
         </table>
 
-        <table>
+        <table id="pnumbers">
             <tr>
                 <th> Person </th>
                 <th> Number </th>
