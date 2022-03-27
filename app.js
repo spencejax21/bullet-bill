@@ -21,8 +21,15 @@ app.get('/', (req, res) => {
     res.render(path.join(__dirname, "/pages/home.ejs"));
 })
 
-app.get('/numpeople', (req, res) => {
-  res.render(path.join(__dirname, "/pages/numPeople.ejs"));
+app.get('/count', (req, res) => {
+  var blobname = "\"" + req.query.blobname + "\"";
+  res.render(path.join(__dirname, "/pages/numPeople.ejs"),{
+    blob: blobname
+  });
+})
+
+app.get('/results', (req, res) => {
+  res.render(path.join(__dirname, "/pages/results.ejs"));
 })
 
 app.post('/receipt-upload', multer.single('profile-file'), (req, res, next) => {
@@ -39,14 +46,20 @@ app.post('/receipt-upload', multer.single('profile-file'), (req, res, next) => {
   });
 
   blobStream.on('finish', () => {
-    var parsed = send_receipt(`https://storage.googleapis.com/${bucket.name}/${blob.name}`);
+    /*var parsed = send_receipt(`https://storage.googleapis.com/${bucket.name}/${blob.name}`);
     parsed.then(function(result){
-      /*res.render(path.join(__dirname, "/pages/output.ejs"), {
+      res.render(path.join(__dirname, "/pages/output.ejs"), {
         data: result
-      });*/
+      });
+      
 
-      return res.send(result);
-    })
+      //return res.send(result);
+    })*/
+
+    //var string = encodeURIComponent(`https://storage.googleapis.com/${bucket.name}/${blob.name}`);
+    var string = blob.name;
+    string = string.substring(0, string.indexOf(".png"));
+    res.redirect('/count?blobname=' + string);
   });
 
   blobStream.end(req.file.buffer);
