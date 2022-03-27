@@ -22,7 +22,7 @@
         
         <title>Receipt Form</title>
         <h1 class="slogan">
-            Split bills <br/> quick and easy
+            Split bills <br/> faster than <br/> a bullet
         </h1>
     </header>
 
@@ -30,11 +30,11 @@
         <form method="POST" action="/receipt-upload" enctype="multipart/form-data">
             <div>
                 <input  id="upload" type="file" name="profile-file" style="display: none;" required/>
-                <input type="button" class="browse" value="Browse" onclick="document.getElementById('upload').click();" />
+                <input type="button" class="browse" value="Select Receipt" onclick="document.getElementById('upload').click();" />
             </div>
             <div>
                 <!--<input class="upload" type="submit" value="Upload" />-->
-                <button id = "send" class="upload" disabled=true>Select An Image</button>
+                <button id = "send" class="upload" disabled=true><i class="fa-solid fa-arrow-up"></i>  Upload</button>
             </div>
         </form>
     </body>

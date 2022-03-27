@@ -119,15 +119,15 @@
     transition: background 0.3s ease-in-out;
 }
 .upload:hover {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.596);
 }
 
 .upload:disabled{
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(194, 194, 194, 0.7);
 }
 
 .disabled {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(194, 194, 194, 0.7);
 }
 
 body{
