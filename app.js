@@ -15,7 +15,7 @@ const multer = Multer({
     fileSize: 25 * 1024 * 1024, // no larger than 5mb, you can change as needed.
   },
 });
-const bucket = storage.bucket(process.env.GCLOUD_STORAGE_BUCKET);
+//const bucket = storage.bucket(process.env.GCLOUD_STORAGE_BUCKET);
 
 app.get('/', (req, res) => {
     res.render(path.join(__dirname, "/pages/home.ejs"));
@@ -33,7 +33,9 @@ app.get('/results', (req, res) => {
     parsed.then(function(result){
       res.render(path.join(__dirname, "/pages/results.ejs"), {
         count: req.query.count,
-        data: JSON.stringify(result)
+        data: JSON.stringify(result),
+        total: result.total,
+        subtotal: result.subtotal
       });
     })
 })

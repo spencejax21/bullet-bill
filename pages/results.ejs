@@ -10,6 +10,10 @@
         <link rel="stylesheet" href = "style.css"> 
         <script src="https://kit.fontawesome.com/62ec86d023.js" crossorigin="anonymous"></script>
         <script type="text/javascript" src="script2.js"></script>
+        <script>
+            let total = <%-total%>;
+            let subtotal = <%-subtotal%>;
+        </script>
     </head>
 
     <header>
@@ -61,7 +65,7 @@
                         <th><%-i%></th>
                         <th>
                              <%let str = "Person " + i%>
-                             <input  class="pnumInput" id= "<%-str%>"name="<%-str%>" type="text" placeholder = "Enter Phone Number" size=20 required/>
+                             <input  class="pnumInput" id= "<%-str%>"name="<%-str%>" type="tel" placeholder = "Enter Phone Number" size=20 required/>
                         </th>
                     </tr>
                 <%}%>
