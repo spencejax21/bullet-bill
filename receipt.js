@@ -35,8 +35,8 @@ let send_receipt = (async (img) => {
         total = -1;
         subtotal = -1;
         begOfItems = -1;
+        foundItemList = false;
         endOfItems = -1;
-        foundDateTime = false;
         foundFirstTotal = false;
 
         for(let i=0; i<arr.length; i++){
@@ -47,32 +47,15 @@ let send_receipt = (async (img) => {
                     index = str.toLowerCase().indexOf(x);
                     //console.log(index);
                     data.push(str.substring(index));
-                    if(!foundDateTime){
-                        foundDateTime = true;
-                    }
-                    else{
-                        begOfItems = data.length;
-                    }
                     break;
                 }
             }
             if(index == -1 && date.test(str)){
                 data.push(str);
-                if(!foundDateTime){
-                    foundDateTime = true;
-                }
-                else{
-                    begOfItems = data.length;
-                }
             }
             else if(time.test(str)){
                 data.push(str);
-                if(!foundDateTime){
-                    foundDateTime = true;
-                }
-                else{
-                    begOfItems = data.length;
-                }
+            
             }
             else if(str.includes("$")){
                 data.push(str);
@@ -90,6 +73,12 @@ let send_receipt = (async (img) => {
                     if(!foundFirstTotal){
                         endOfItems = data.length-1;
                         foundFirstTotal = true;
+                    }
+                }
+                else{
+                    if(!foundItemList){
+                        foundItemList = true;
+                        begOfItems = data.length-1;
                     }
                 }
             }
@@ -117,10 +106,10 @@ let send_receipt = (async (img) => {
     }
 });
 
-var parsed = send_receipt('https://www.patriotsoftware.com/wp-content/uploads/2019/12/invoice-vs.-receipt-image-of-receipt.jpg');
+//var parsed = send_receipt('https://www.patriotsoftware.com/wp-content/uploads/2019/12/invoice-vs.-receipt-image-of-receipt.jpg');
 
-parsed.then(function(result){
-    console.log(result);
-})
+//parsed.then(function(result){
+//    console.log(result);
+//})
 
 module.exports = send_receipt;

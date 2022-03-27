@@ -9,29 +9,22 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">  
         <link rel="stylesheet" href = "style.css"> 
         <script src="https://kit.fontawesome.com/62ec86d023.js" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="script.js"></script>
     </head>
     
     <header>
         <img id="logo" src="BBLogo.png">   
         <h2 id="bulletTitle">BulletBill</h2>
-        <a href="/numPeople">Number of People Input</a>
-        
-        <title>Receipt Form</title>
-        <h1 class="slogan">
-            Split bills <br/> quick and easy
-        </h1>
+
+        <h2 style = "text-align:center">
+            How many people are paying?
+        </h2>
     </header>
 
     <body id = "grad">
         <form method="POST" action="/receipt-upload" enctype="multipart/form-data">
             <div>
-                <input  id="upload" type="file" name="profile-file" style="display: none;" required/>
-                <input type="button" class="browse" value="Browse" onclick="document.getElementById('upload').click();" />
-            </div>
-            <div>
-                <!--<input class="upload" type="submit" value="Upload" />-->
-                <button id = "send" class="upload" disabled=true>Select An Image</button>
+                <input  id="number" type="text" name="How many people are paying?" placeholder = "Enter num 1-20" size=20 required/>
+                <button class="go"><i class="fa-solid fa-arrow-right"></i>  Go </button>
             </div>
         </form>
     </body>
