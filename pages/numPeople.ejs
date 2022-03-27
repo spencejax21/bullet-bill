@@ -12,6 +12,15 @@
 
         <script>
             var blob = <%-blob%>;
+
+            function send(){
+                var input = document.getElementById("number");
+                var count = input.value;
+                var url = document.baseURI;
+                url = url.substring(0, url.indexOf("count")) + "results";
+                url += "?count=" + count + "&blob=" + blob;
+                location.href = url;
+            }
         </script>
     </head>
     
@@ -25,10 +34,10 @@
     </header>
 
     <body id = "grad">
-        <form method="POST" action="/receipt-upload" enctype="multipart/form-data">
+        <form action="javascript:send()">
             <div>
                 <input  id="number" type="number" name="How many people are paying?" placeholder = "Enter num 1-20" size=20 required/>
-                <button class="go"><i class="fa-solid fa-arrow-right"></i>  Go </button>
+                <button id="go" class="go"><i class="fa-solid fa-arrow-right"></i>  Go </button>
             </div>
         </form>
     </body>
