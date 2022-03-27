@@ -1,3 +1,4 @@
+/* big page*/
 @media (min-width: 500px) {
     .slogan {
         font-family: 'Roboto';
@@ -24,29 +25,31 @@
         text-align:center;
         color: white;
     }
+
+    #logo {
+        display: inline-block;
+        height: 75px;
+        width: 96px;
+        position: absolute;
+        top: 16px;
+        left: 15px;
+    }
+    
+    #bulletTitle{
+        color: white;
+        text-align: left; 
+        /*text-decoration: overline; */
+        font-family: 'EB Garamond';
+        font-weight: 800;
+        padding-top: 30px; 
+        display: inline-block;
+        position: absolute;
+        top: 1px;
+        left: 85px;
+    } 
 }
 
-#logo {
-    display: inline-block;
-    height: 75px;
-    width: 96px;
-    position: absolute;
-    top: 16px;
-    left: 15px;
-}
-
-#bulletTitle{
-    color: white;
-    text-align: left; 
-    /*text-decoration: overline; */
-    font-family: 'EB Garamond';
-    font-weight: 800;
-    padding-top: 30px; 
-    display: inline-block;
-    position: absolute;
-    top: 1px;
-    left: 85px;
-}
+/* small page*/
 @media(max-width: 500px) {
     .slogan {
         font-family: 'Roboto';
@@ -88,7 +91,48 @@
         color: white;
         font-size: 80%;
     }
+
+    #logo {
+        display: inline-block;
+        height: 30px;
+        width: 38.4px;
+        position: absolute;
+        top: 16px;
+        left: 15px;
+    }
+    
+    #bulletTitle{
+        color: white;
+        text-align: left; 
+        /*text-decoration: overline; */
+        font-family: 'EB Garamond';
+        font-weight: 320;
+        font-size: 40%;
+        padding-top: 5%; 
+        display: inline-block;
+        position: absolute;
+        top: 1px;
+        left: 85px;
+    }
 }
+
+#number {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: none;
+    box-shadow: none;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    padding-left: 0.5%;
+    margin-top: 2%;
+    color: white;
+}
+
+#number::placeholder {
+    color: rgba(255, 255, 255, 0.356);
+}
+
 .browse:hover{
     background-color: rgba(255, 255, 255, 0.5);
 }
@@ -110,7 +154,8 @@
     color: black;
 
     mix-blend-mode: screen;
-    border-radius: 8px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
     padding-left: 0.5%;
     padding-right: 0.5%;
     padding-top: 0.5%;

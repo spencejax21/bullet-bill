@@ -12,8 +12,8 @@
     </head>
     
     <header>
-        <img id="logo" src="BBLogo.png">   
-        <h2 id="bulletTitle">BulletBill</h2>
+            <img id="logo" src="BBLogo.png">   
+            <h3 id="bulletTitle">bulletbill</h3>
 
         <h2 id="people" style = "text-align:center; color: white">
             How many people are paying?
@@ -23,7 +23,7 @@
     <body id = "grad">
         <form method="POST" action="/receipt-upload" enctype="multipart/form-data">
             <div>
-                <input  id="number" type="text" name="How many people are paying?" placeholder = "Enter num 1-20" size=20 required/>
+                <input  id="number" type="number" name="How many people are paying?" placeholder = "Enter num 1-20" size=20 required/>
                 <button class="go"><i class="fa-solid fa-arrow-right"></i>  Go </button>
             </div>
         </form>
