@@ -3,9 +3,12 @@ var Multer  = require('multer');
 var path = require('path');
 var id = require('shortid');
 const send_receipt = require('./receipt');
+const send_text = require("./twilio.js");
+const bodyParser = require('body-parser');
 
 var app = express();
 app.use(express.static('pages/'));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 const {Storage} = require('@google-cloud/storage');
 const storage = new Storage();
@@ -39,6 +42,10 @@ app.get('/results', (req, res) => {
       });
     })
 })
+
+app.post('/text', (req, res) => {
+  send_text(req.body.msg, "+1"+req.body.number);
+});
 
 app.post('/receipt-upload', multer.single('profile-file'), (req, res, next) => {
   if (!req.file) {

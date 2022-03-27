@@ -57,6 +57,13 @@ document.addEventListener("DOMContentLoaded", function(){
                 cost[i] += tax;
                 var msg = "You owe $" + cost[i].toFixed(2) + " for " + itemsArr[i];
                 console.log(msg);
+                var url = document.baseURI;
+                url = url.substring(0, url.indexOf("results"));
+                $.post("/text",
+                {
+                    msg: msg,
+                    number: numbers[i]
+                });
             }
         }
     }
