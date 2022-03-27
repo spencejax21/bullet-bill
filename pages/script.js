@@ -15,5 +15,18 @@ document.addEventListener("DOMContentLoaded", function(){
         this.innerHTML = "Processing...";
         this.className = "upload disabled";
     }
+
+    var items = document.getElementById("items");
+    var sendbtn = document.getElementById("go");
+    sendbtn.onclick = function(){
+        console.log("clicked");
+        var x = items.rows.length;
+        for(var i = 1; i<x; i++){
+            items.rows[i].cells[0].innerText;
+            items.rows[i].cells[1].innerText;
+        }
+    }
 });
+
+
 

@@ -33,7 +33,9 @@ app.get('/results', (req, res) => {
     parsed.then(function(result){
       res.render(path.join(__dirname, "/pages/results.ejs"), {
         count: req.query.count,
-        data: JSON.stringify(result)
+        data: JSON.stringify(result),
+        total: result.total,
+        subtotal: result.subtotal
       });
     })
 })
