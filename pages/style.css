@@ -7,11 +7,6 @@
         padding-top: 30px;
     }
     
-    .logo {
-        color: rgba(255, 255, 255);
-        text-align: left;
-    }
-    
     .browse {
         background-color: rgba(255, 255, 255, 0.3);
         color: white;
@@ -28,8 +23,8 @@
 
 #logo {
     display: inline-block;
-    height: 90px;
-    width: 115px;
+    height: 75px;
+    width: 96px;
     position: absolute;
     top: 16px;
     left: 15px;
@@ -38,12 +33,14 @@
 #bulletTitle{
     color: white;
     text-align: left; 
-    text-decoration: overline; 
+    /*text-decoration: overline; */
+    font-family: 'EB Garamond';
+    font-weight: 800;
     padding-top: 30px; 
     display: inline-block;
     position: absolute;
-    top: 8px;
-    left: 105px;
+    top: 1px;
+    left: 85px;
 }
 @media(max-width: 500px) {
     .slogan {
@@ -52,12 +49,6 @@
         color: rgba(255, 255, 255, 0.8);
         text-align: center;
         padding-top: 20px;
-    }
-
-    .logo {
-        color: rgba(255, 255, 255);
-        text-align: left;
-        font-size: 12px;
     }
 
     .browse {
