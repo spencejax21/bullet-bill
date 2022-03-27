@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function(){
         console.log(itemsArr);
         console.log(numbers);
         console.log(cost);
-        console.log(total);
+        //console.log(total);
     }
 });
 
